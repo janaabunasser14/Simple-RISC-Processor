@@ -1,0 +1,62 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=RISCProcessor
+[Library]
+RISCProcessor=.\RISCProcessor\RISCProcessor.lib
+[$LibMap$]
+RISCProcessor=.
+Active_lib=
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VERILOG
+REFRESH_FLOW=1
+FLOWTOOLS=ONLY_IMPL
+ON_SERVERFARM_SYNTH=0
+ON_SERVERFARM_IMPL=0
+ON_SERVERFARM_SIM=0
+[IMPLEMENTATION]
+UCF=
+[Files]
+/Stack.v=-1
+/Register.v=-1
+/Decode.v=-1
+/RegisterFile.v=-1
+/Fetch.v=-1
+/ControlUnit.v=-1
+/CUTEST.v=-1
+/ALU.v=-1
+/ALUTest.v=-1
+/Memory.v=-1
+/MemTest.v=-1
+/WriteBack.v=-1
+/StackTest.v=-1
+/Processor.bde=-1
+/FetchTest.v=-1
+/Year4Sem2\Arch\Proj2\MulticycleRISC\MulticycleProcessor\RISCProcessor\src\TestProcessor.awc=-1
+[Files.Data]
+.\src\Stack.v=Verilog Source Code
+.\src\Register.v=Verilog Source Code
+.\src\Decode.v=Verilog Source Code
+.\src\RegisterFile.v=Verilog Source Code
+.\src\Fetch.v=Verilog Source Code
+.\src\ControlUnit.v=Verilog Source Code
+.\src\CUTEST.v=Verilog Source Code
+.\src\ALU.v=Verilog Source Code
+.\src\ALUTest.v=Verilog Source Code
+.\src\Memory.v=Verilog Source Code
+.\src\MemTest.v=Verilog Source Code
+.\src\WriteBack.v=Verilog Source Code
+.\src\StackTest.v=Verilog Source Code
+.\src\Processor.bde=Block Diagram
+.\src\FetchTest.v=Verilog Source Code
+.\src\Year4Sem2\Arch\Proj2\MulticycleRISC\MulticycleProcessor\RISCProcessor\src\TestProcessor.awc=Accelerated Waveform Configuration
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+[file_out:/Processor.bde]
+/..\compile\Processor.v=-1

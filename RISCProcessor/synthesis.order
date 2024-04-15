@@ -1,0 +1,17 @@
+i<>.\src\Stack.v
+i<>.\src\Register.v
+i<>.\src\test.bde
+i<>.\src\Decode.v
+i<>.\src\RegisterFile.v
+i<>.\src\Fetch.v
+i<>.\src\ControlUnit.v
+i<>.\src\CUTEST.v
+i<>.\src\ALU.v
+i<>.\src\ALUTest.v
+i<>.\src\Memory.v
+i<>.\src\MemTest.v
+i<>.\src\WriteBack.v
+i<>.\src\StackTest.v
+i<>.\src\Processor.bde
+i<>.\src\RegisterFile.bde
+i<>.\src\FetchTest.v

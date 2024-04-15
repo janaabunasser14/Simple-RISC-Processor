@@ -1,0 +1,15 @@
+.\src\Stack.v
+.\src\Register.v
+.\src\Decode.v
+.\src\RegisterFile.v
+.\src\Fetch.v
+.\src\ControlUnit.v
+.\src\CUTEST.v
+.\src\ALU.v
+.\src\ALUTest.v
+.\src\Memory.v
+.\src\MemTest.v
+.\src\WriteBack.v
+.\src\StackTest.v
+.\src\Processor.bde
+.\src\FetchTest.v
