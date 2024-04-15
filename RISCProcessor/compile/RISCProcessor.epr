@@ -1,0 +1,15 @@
+"../src/ALU.v"	1
+"../src/Stack.v"	1
+"../src/Decode.v"	1
+"../src/ALUTest.v"	2
+"../src/StackTest.v"	1
+"../src/Register.v"	1
+"../src/Memory.v"	1
+"../src/Fetch.v"	1
+"../src/RegisterFile.v"	1
+"../src/ControlUnit.v"	1
+"../src/CUTEST.v"	2
+"../src/MemTest.v"	1
+"../src/WriteBack.v"	1
+"../compile/Processor.v"	1
+"../src/FetchTest.v"	2

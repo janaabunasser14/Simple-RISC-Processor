@@ -1,0 +1,60 @@
+MESSAGE "Pass 1. Scanning modules hierarchy."
+MESSAGE_SP VCP2113 "Module \$root found in current working library."
+BEGINPROGRESS Compiling...
+UPDATEPROGRESS 2
+UPDATEPROGRESS 4
+UPDATEPROGRESS 7
+UPDATEPROGRESS 9
+UPDATEPROGRESS 11
+UPDATEPROGRESS 14
+UPDATEPROGRESS 16
+UPDATEPROGRESS 18
+UPDATEPROGRESS 21
+UPDATEPROGRESS 23
+UPDATEPROGRESS 25
+UPDATEPROGRESS 28
+UPDATEPROGRESS 30
+UPDATEPROGRESS 32
+UPDATEPROGRESS 35
+MESSAGE "Pass 2. Processing instantiations."
+UPDATEPROGRESS 40
+UPDATEPROGRESS 45
+WARNING VCP2597 "Some unconnected ports remain at instance: dut. Module ControlUnit has unconnected  port(s) : FetchDone, FetchEnable, DecodeEnable, RegFileEnable, ALUEnable, MemEnable, WriteBackEnable." "C:/Users/user/Desktop/MulticycleProcessor/RISCProcessor/src/CUTEST.v" 25  1
+WARNING VCP2590 "Undefined port carry in module ALU." "C:/Users/user/Desktop/MulticycleProcessor/RISCProcessor/src/ALUTest.v" 25  1
+WARNING VCP2590 "Undefined port overflow in module ALU." "C:/Users/user/Desktop/MulticycleProcessor/RISCProcessor/src/ALUTest.v" 26  1
+WARNING VCP2590 "Undefined port PCdecode in module Fetch." "C:/Users/user/Desktop/MulticycleProcessor/RISCProcessor/src/FetchTest.v" 20  1
+WARNING VCP2597 "Some unconnected ports remain at instance: uut. Module Fetch has unconnected  port(s) : PCnormal, FetchEnable, FetchDone." "C:/Users/user/Desktop/MulticycleProcessor/RISCProcessor/src/FetchTest.v" 16  1
+MESSAGE "Pass 3. Processing behavioral statements."
+UPDATEPROGRESS 50
+UPDATEPROGRESS 56
+UPDATEPROGRESS 62
+UPDATEPROGRESS 68
+UPDATEPROGRESS 80
+MESSAGE "Running Optimizer."
+MESSAGE "ELB/DAG code generating."
+MESSAGE_SP VCP2113 "Module \$root found in current working library."
+UPDATEPROGRESS 81
+UPDATEPROGRESS 82
+UPDATEPROGRESS 83
+UPDATEPROGRESS 84
+UPDATEPROGRESS 85
+UPDATEPROGRESS 86
+UPDATEPROGRESS 87
+UPDATEPROGRESS 88
+UPDATEPROGRESS 89
+UPDATEPROGRESS 90
+UPDATEPROGRESS 91
+UPDATEPROGRESS 92
+UPDATEPROGRESS 93
+UPDATEPROGRESS 94
+UPDATEPROGRESS 95
+UPDATEPROGRESS 96
+UPDATEPROGRESS 97
+UPDATEPROGRESS 98
+UPDATEPROGRESS 100
+MESSAGE "Unit top modules: ControlUnit_TB ALUTest MemTest StackTest Processor Fetch_tb."
+MESSAGE "$root top modules: ControlUnit_TB Stack_Test NewStack_Test ALUTest MemTest Stack_TB StackTest Processor Fetch_tb."
+ENDPROGRESS Compiling...
+SUCCESS "Compile success 0 Errors 5 Warnings  Analysis time: 0[s]."
+WARNING ALOG: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "done"
