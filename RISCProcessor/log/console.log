@@ -1,0 +1,88 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'Register' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'RegisterFile' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'Decode' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'Stack' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# Breakpoint set on signal "/Processor/clk2".
+# Breakpoint set on signal "/Processor/reset".
+alog -O2 -sve -msg 5 -sv2k12 -work RISCProcessor $dsn/src/Stack.v $dsn/src/Register.v $dsn/src/Decode.v $dsn/src/RegisterFile.v $dsn/src/Fetch.v $dsn/src/ControlUnit.v $dsn/src/CUTEST.v $dsn/src/ALU.v $dsn/src/ALUTest.v $dsn/src/Memory.v $dsn/src/MemTest.v $dsn/src/WriteBack.v $dsn/src/StackTest.v $dsn/src/Processor.bde $dsn/src/FetchTest.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Warning: VCP2597 CUTEST.v : (25, 1): Some unconnected ports remain at instance: dut. Module ControlUnit has unconnected  port(s) : FetchDone, FetchEnable, DecodeEnable, RegFileEnable, ALUEnable, MemEnable, WriteBackEnable.
+# Warning: VCP2590 ALUTest.v : (25, 1): Undefined port carry in module ALU.
+# Warning: VCP2590 ALUTest.v : (26, 1): Undefined port overflow in module ALU.
+# Warning: VCP2590 FetchTest.v : (20, 1): Undefined port PCdecode in module Fetch.
+# Warning: VCP2597 FetchTest.v : (16, 1): Some unconnected ports remain at instance: uut. Module Fetch has unconnected  port(s) : PCnormal, FetchEnable, FetchDone.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: ControlUnit_TB ALUTest MemTest StackTest Processor Fetch_tb.
+# $root top modules: ControlUnit_TB Stack_Test NewStack_Test ALUTest MemTest Stack_TB StackTest Processor Fetch_tb.
+# Compile success 0 Errors 5 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+asim -O5 +access +r +m+Processor Processor
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'Register' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'RegisterFile' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'Decode' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'Stack' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.5 [s]
+# SLP: Finished : 0.6 [s]
+# SLP: 0 primitives and 26 (100.00%) other processes in SLP
+# SLP: 165 (100.00%) signals in SLP and 0 interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 4702 kB (elbread=427 elab2=4141 kernel=134 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\user\Desktop\MulticycleProcessor\RISCProcessor\src\wave.asdb
+#  4:10 PM, Sunday, July 9, 2023
+#  Simulation has been initialized
+# Breakpoint set on signal "/Processor/clk2".
+# Breakpoint set on signal "/Processor/reset".
+# Waveform file 'untitled.awc' connected to 'C:/Users/user/Desktop/MulticycleProcessor/RISCProcessor/src/wave.asdb'.
+# VSIM: 6 object(s) traced.
+# KERNEL: Error: KERNEL_0166 "/Processor/clk" does not have write access. Use switch +access +w_nets for this region.
+# VSIM: Error: Cannot force signal "/Processor/clk" with formula "0 0fs, 1 50ns -r 100ns".
+# KERNEL: Error: KERNEL_0166 "/Processor/clk3" does not have write access. Use switch +access +w_nets for this region.
+# VSIM: Error: Cannot force signal "/Processor/clk3" with formula "0 0fs, 1 50ns -r 100ns".
+# KERNEL: Error: KERNEL_0166 "/Processor/clk2" does not have write access. Use switch +access +w_nets for this region.
+# VSIM: Error: Cannot force signal "/Processor/clk2" with formula "0 0fs, 1 50ns -r 100ns".
+# KERNEL: Error: KERNEL_0166 "/Processor/clk4" does not have write access. Use switch +access +w_nets for this region.
+# VSIM: Error: Cannot force signal "/Processor/clk4" with formula "0 0fs, 1 50ns -r 100ns".
+# KERNEL: Error: KERNEL_0166 "/Processor/clk5" does not have write access. Use switch +access +w_nets for this region.
+# VSIM: Error: Cannot force signal "/Processor/clk5" with formula "0 0fs, 1 50ns -r 100ns".
+endsim
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'Register' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'RegisterFile' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'Decode' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'Stack' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# Breakpoint on signal "/Processor/clk2" cleared.
+# Breakpoint on signal "/Processor/reset" cleared.

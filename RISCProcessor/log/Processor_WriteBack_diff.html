@@ -1,0 +1,273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<!----------------------------------------------------------------------------->
+<!--                          BEGIN HTML HEAD                                -->
+<!--                                                                         -->
+
+<HEAD>
+<TITLE>Compare interfaces - WriteBack(Symbol) to WriteBack(Verilog Source Code)</TITLE>
+<STYLE>
+* {font-family: sans-serif;}
+.Err	{color:#FF0000;cursor:hand;text-decoration:underline;}
+.Warn	{color:#0000FF;cursor:hand;text-decoration:underline;}
+.Info	{color:#000000;cursor:hand;text-decoration:underline;}
+.Sccss  {color:#009600;cursor:hand;text-decoration:underline;}
+.ErrH	{color:#FF0000;cursor:hand;text-decoration:underline;}
+.WarnH	{color:#0000FF;cursor:hand;text-decoration:underline;}
+.InfoH	{color:#000000;cursor:hand;text-decoration:underline;}
+.Err1	{color:#FF0000;}
+.Warn1	{color:#0000FF;}
+.Info1	{color:#000000;}
+.Sccss1 {color:#009600;}
+</STYLE>
+</HEAD>
+<BODY BGCOLOR="white" TEXT="black" LINK="blue" VLINK="purple" style="background-image:url(file:///C:/Aldec/Active-HDL-Student-Edition/Flows/Res/default.bmp); background-repeat: repeat;">
+<tt>
+<!--                                                                         -->
+<!--                             END HEADER                                  -->
+<!----------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------->
+<!--                            BEGIN VBSCRIPT                               -->
+<!--                                                                         -->
+<SCRIPT LANGUAGE=JSCRIPT>
+	function RollOn() {
+		switch(window.event.srcElement.className) {
+			case 'Err':
+				window.event.srcElement.className = 'ErrH'; break;
+			case 'Warn':
+				window.event.srcElement.className = 'WarnH'; break;
+			case 'Info':
+				window.event.srcElement.className = 'InfoH'; break;
+		}
+	}
+	function RollOff() {
+		switch(window.event.srcElement.className) {
+			case 'ErrH':
+				window.event.srcElement.className = 'Err'; break;
+			case 'WarnH':
+				window.event.srcElement.className = 'Warn'; break;
+			case 'InfoH':
+				window.event.srcElement.className = 'Info'; break;
+		}
+	}
+	function OnError(sMsg,sUrl,sLine) {
+		return true;
+	}
+	
+	document.onmouseover = RollOn;
+	document.onmouseout = RollOff;
+	window.onerror = OnError;
+</SCRIPT>
+
+<SCRIPT LANGUAGE=VBSCRIPT>
+
+Function IID_IDispatch
+	IID_IDispatch = "{00020400-0000-0000-C000-000000000046}"
+End Function
+
+Function CLSID_Executor
+	CLSID_Executor = "Aldec.ExePlugIn.Generic.7"
+End Function
+
+
+Sub OpenPlugIn (progid, template, document, element, string)
+
+	Dim executor, command
+
+	Set executor = window.external.aldec.connector.OpenPlugIn(CLSID_Executor, IID_IDispatch)
+
+	command = "?Activate[<"+progid+">][<"+template+">][<"+document+">][<"+element+">][<"+string+">]"
+
+	executor.ExecuteCommand command, ""
+
+End Sub
+
+
+</SCRIPT>
+<!--                                                                         -->
+<!--                             END VBSCRIPT                                -->
+<!----------------------------------------------------------------------------->
+
+<H2>Compare interfaces - WriteBack(Symbol) to WriteBack(Verilog Source Code)</H2>
+
+Created on Son 2023-07-02 at 00:50:31
+<hr style="height:2px;border-width:0;color:#008080;background-color:#008080">
+<SPAN class=Info1>Comparing interfaces:</SPAN><BR>
+<SPAN class=Info1>Symbol WriteBack.</SPAN><BR>
+<SPAN class=Info1>Verilog Source Code C:/Users/Administrator/Desktop/Year 4 Sem2/Arch/Proj2/MulticycleRISC/MulticycleProcessor/RISCProcessor/src/WriteBack.v.</SPAN><BR>
+<SPAN class=Warn1>Verilog Source Code cannot be updated.</SPAN><BR>
+<SPAN class=Info1><br>
+<table style=text-align:center;vertical-align:center;font-size:15px;border-collapse:collapse>
+	<tr>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px colspan=11>Ports
+	</th></tr>
+	<tr style=text-align:center;vertical-align:center;font-size:15px;border-collapse:collapse>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Name</th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Range</th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Mode</th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Type</th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Delay</th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px></th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Name</th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Range</th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Mode</th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Type</th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Delay</th>
+	</tr>
+	<tr style=background-color:#ffffff;color:#000000>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>clk</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Input</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>wire</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>identical</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>clk</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Input</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>wire</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+	</tr>
+	<tr style=background-color:#ffffff;color:#000000>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>ALU_out</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>(31:0)</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Input</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>wire</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>identical</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>ALU_out</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>(31:0)</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Input</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>wire</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+	</tr>
+	<tr style=background-color:#ffffff;color:#000000>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Mem_out</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>(31:0)</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Input</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>wire</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>identical</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Mem_out</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>(31:0)</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Input</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>wire</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+	</tr>
+	<tr style=background-color:#ffffff;color:#000000>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>WBData</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Input</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>wire</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>identical</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>WBData</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Input</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>wire</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+	</tr>
+	<tr style=background-color:#ffffff;color:#000000>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>BusW</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>(31:0)</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Output</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>reg</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>identical</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>BusW</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>(31:0)</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Output</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>reg</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+	</tr>
+	<tr style=background-color:#ffffff;color:#008000>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>missing left</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>WriteBackEnable</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Input</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>wire</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+	</tr>
+</table>
+<br>
+<br>
+<table style=text-align:center;vertical-align:center;font-size:15px;border-collapse:collapse>
+	<tr>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px colspan=7>Port Comments
+	</th></tr>
+	<tr style=text-align:center;vertical-align:center;font-size:15px;border-collapse:collapse>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Name</th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Range</th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Comment</th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px></th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Name</th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Range</th>
+		<th style=border-width:2px;border-style:solid;border-color:#0f0f0f;padding:3px>Comment</th>
+	</tr>
+	<tr style=background-color:#ffffff;color:#000000>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>clk</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>identical</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>clk</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+	</tr>
+	<tr style=background-color:#ffffff;color:#000000>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>ALU_out</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>(31:0)</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>identical</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>ALU_out</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>(31:0)</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+	</tr>
+	<tr style=background-color:#ffffff;color:#000000>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Mem_out</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>(31:0)</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>identical</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>Mem_out</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>(31:0)</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+	</tr>
+	<tr style=background-color:#ffffff;color:#000000>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>WBData</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>identical</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>WBData</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+	</tr>
+	<tr style=background-color:#ffffff;color:#000000>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>BusW</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>(31:0)</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>identical</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>BusW</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>(31:0)</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+	</tr>
+	<tr style=background-color:#ffffff;color:#000000>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>identical</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px>WriteBackEnable</td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+		<td style=border-style:solid;border-width:1px;border-color:#7f7f7f;padding:3px></td>
+	</tr>
+</table>
+<br></SPAN><BR>
+<SPAN class=Warn1>Found 1 difference.</SPAN><BR>
+</tt>
+</BODY>
+
+</HTML>
